@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import Button from "./components/Button";
 
+import NAV_LINKS from "./configs/NavLinks";
+
 function App() {
   return (
     <div className="flex min-h-screen bg-gray-100">
@@ -25,18 +27,16 @@ function App() {
 
         {/* Nav links */}
         <div className="mt-4 w-full space-y-3">
-          <button className="flex items-center gap-3 w-full px-4 py-3 text-cyan-700 text-xl font-semibold rounded-lg bg-cyan-50 hover:bg-cyan-100 transition">
-            <User className="w-6 h-6" /> About
-          </button>
-          <button className="flex items-center gap-3 w-full px-4 py-3 text-gray-700 text-xl font-semibold rounded-lg hover:bg-gray-100 transition">
-            <Briefcase className="w-6 h-6" /> Experience
-          </button>
-          <button className="flex items-center gap-3 w-full px-4 py-3 text-gray-700 text-xl font-semibold rounded-lg hover:bg-gray-100 transition">
-            <FolderKanban className="w-6 h-6" /> Projects
-          </button>
-          <button className="flex items-center gap-3 w-full px-4 py-3 text-gray-700 text-xl font-semibold rounded-lg hover:bg-gray-100 transition">
-            <Code2 className="w-6 h-6" /> Skills
-          </button>
+          {NAV_LINKS.map(({ linkTitle, icon: Icon }) => {
+            return (
+              <div key={linkTitle}>
+                {" "}
+                <button className="flex items-center gap-4 w-full px-4 py-3 text-gray-600 text-md font-semibold rounded-lg hover:bg-cyan-100 transition">
+                  <Icon className="text-cyan-700" /> {linkTitle}
+                </button>
+              </div>
+            );
+          })}
         </div>
       </nav>
 
