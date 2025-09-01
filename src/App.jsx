@@ -1,23 +1,33 @@
 import React from "react";
 import MyPhoto from "./../public/my-photo.png";
-import {
-  MapPin,
-  User,
-  Briefcase,
-  FolderKanban,
-  Code2,
-  Download,
-  Linkedin,
-} from "lucide-react";
+import { MapPin, Download, Linkedin, Github, Mail, Phone } from "lucide-react";
+import { SiPeerlist } from "react-icons/si";
 import Button from "./components/Button";
 
 import NAV_LINKS from "./configs/NavLinks";
+const SOCIAL_ICONS = [
+  {
+    Icon: Github,
+  },
+  {
+    Icon: Linkedin,
+  },
+  {
+    Icon: SiPeerlist,
+  },
+  {
+    Icon: Mail,
+  },
+  {
+    Icon: Phone,
+  },
+];
 
 function App() {
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex min-h-screen">
       {/* Sidebar */}
-      <nav className="bg-white border-r shadow-sm w-64 p-6 hidden md:flex flex-col items-center">
+      <nav className="bg-white shadow-sm w-64 p-6 hidden md:flex flex-col items-center">
         {/* Profile image (visible on md+ screens) */}
         <img
           src={MyPhoto}
@@ -58,9 +68,23 @@ function App() {
           </h1>
 
           {/* Title / Positions */}
-          <h2 className="text-2xl font-semibold text-cyan-700 leading-snug mb-6">
+          <h2 className="text-2xl font-semibold text-cyan-700 leading-snug mb-8">
             Full-Stack Developer | MERN Stack
           </h2>
+
+          <div className="flex gap-5 mb-10">
+            {SOCIAL_ICONS.map((iconObj, index) => {
+              const { Icon } = iconObj;
+              return (
+                <div key={index}>
+                  <Icon
+                    size={39}
+                    className="shadow-lg p-2 border-1 border-gray-300 rounded-lg bg-gray-100 text-gray-600 hover:text-cyan-600 hover:bg-cyan-100 hover:border-cyan-600 cursor-pointer"
+                  />
+                </div>
+              );
+            })}
+          </div>
 
           {/* Location */}
           <p className="flex items-center text-gray-600 text-lg mb-8">
