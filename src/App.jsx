@@ -9,6 +9,7 @@ import {
   Download,
   Linkedin,
 } from "lucide-react";
+import Button from "./components/Button";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <img
           src={MyPhoto}
           alt="My Photo"
-          className="w-32 h-32 rounded-full border-4 border-cyan-500 mb-6"
+          className="w-32 h-32 rounded-full border-4 border-cyan-600 mb-6"
         />
 
         {/* Nav links */}
@@ -76,22 +77,30 @@ function App() {
 
           {/* Action buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/resume.pdf"
-              className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-cyan-700 text-white text-base font-medium hover:bg-cyan-800 transition"
-            >
-              <Download className="w-5 h-5" />
-              Download Resume
-            </a>
-            <a
-              href="https://linkedin.com/in/yourprofile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-cyan-700 text-cyan-700 text-base font-medium hover:bg-cyan-50 transition"
-            >
-              <Linkedin className="w-5 h-5" />
-              View LinkedIn
-            </a>
+            <Button
+              btnTitle={
+                <div className="flex items-center justify-center gap-2">
+                  <Download className="w-5 h-5" />
+                  Download Resume
+                </div>
+              }
+              btnVariant={"primary"}
+            />
+            <Button
+              btnTitle={
+                <div className="flex items-center justify-center gap-2">
+                  <Linkedin className="w-5 h-5" />
+                  View LinkedIn
+                </div>
+              }
+              btnVariant={"secondary"}
+              onBtnClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/ravikant-tarare-7843b31b0/",
+                  "_blank"
+                );
+              }}
+            />
           </div>
         </div>
       </main>
