@@ -5,9 +5,9 @@ function Button({ btnTitle, btnVariant, btnSize, onBtnClick, customStyle }) {
     <button
       className={`${
         btnVariant === "primary"
-          ? "bg-cyan-700 text-white  hover:bg-cyan-800 "
+          ? "bg-gradient-to-r from-cyan-700 to-cyan-800 text-white  hover:bg-gradient-to-r hover:from-cyan-800 hover:to-cyan-900 "
           : btnVariant === "secondary"
-          ? "border border-cyan-700 text-cyan-700 hover:bg-cyan-700 hover:text-white"
+          ? "border border-cyan-700 text-cyan-700 hover:bg-gradient-to-r from-cyan-800 to-cyan-700 hover:text-white"
           : ""
       } 
       ${
