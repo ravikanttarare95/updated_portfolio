@@ -1,9 +1,13 @@
-import { GrTechnology } from "react-icons/gr";
+import moneyBookImg from "./../assets/money-book.png";
+import swadImg from "./../assets/swad.png";
 
-const PROJECTS = [
+const PROJECTS_INFO = [
   {
-    title: "moneyBook",
-    desc: "moneyBook helps you take control of your finances by tracking your income and expenses all in one place.",
+    id: 1,
+    projectPhoto: moneyBookImg,
+    projectTitle: "moneyBook",
+    projectDesc:
+      "moneyBook helps you take control of your finances by tracking your income and expenses all in one place.",
     features: [
       "Track all daily income and expenses in one place.",
       "Category-wise income and expense management.",
@@ -11,12 +15,15 @@ const PROJECTS = [
     ],
     technologies: ["HTML", "CSS", "JavaScript"],
     gitHubLink: "https://github.com/ravikanttarare95/money-book.git",
-    liveLink: "https://github.com/ravikanttarare95/money-book.git",
+    liveLink: "https://money-book-ruby.vercel.app",
   },
 
   {
-    title: "Swad",
-    desc: "Experience the authentic taste of India with our delicious, home-style meals. Fresh ingredients, traditional recipes, and a warm ambiance await you!",
+    id: 2,
+    projectPhoto: swadImg,
+    projectTitle: "Swad",
+    projectDesc:
+      "Experience the authentic taste of India with our delicious, home-style meals. Fresh ingredients, traditional recipes, and a warm ambiance await you!",
     features: [
       "Browse Menu Items.",
       "Add Menu Items to cart.",
@@ -28,4 +35,4 @@ const PROJECTS = [
     liveLink: "https://swad-the-taste.netlify.app",
   },
 ];
-export default PROJECTS;
+export default PROJECTS_INFO;

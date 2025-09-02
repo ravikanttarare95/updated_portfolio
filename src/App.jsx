@@ -6,6 +6,8 @@ import Button from "./components/Button";
 
 import NAV_LINKS from "./configs/NavLinks.js";
 import SOCIAL_ICONS from "./configs/SocialIcons.js";
+import ProjectCard from "./components/ProjectCard.jsx";
+import PROJECTS_INFO from "./configs/Projects.js";
 
 function App() {
   return (
@@ -36,18 +38,18 @@ function App() {
 
       {/* Main Content */}
       <main className="p-6 md:p-12">
-        <div className="bg-gray-50 rounded-xl shadow p-10 w-full">
+        <div className="bg-gray-50 rounded shadow p-7 sm:p-10 w-full">
           {/* Profile image (visible only on small screens) */}
           <div className="flex justify-center mb-6 md:hidden">
             <img
               src={MyPhoto}
               alt="My Photo"
-              className="w-32 h-32 rounded-full border-4 border-cyan-500"
+              className="w-32 h-32 rounded-full border-4 border-cyan-700"
             />
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl font-bold text-gray-700 mb-3">
+          <h1 className="text-5xl font-bold text-gray-800 mb-3">
             Ravikant Tarare
           </h1>
 
@@ -115,153 +117,41 @@ function App() {
         </div>
         <div className=" w-full">
           <section className="py-16">
-            <div className="max-w-6xl mx-auto">
-              {/* Heading */}
-              <h2 className="text-4xl font-extrabold text-gray-800 mb-4 text-center">
-                Featured Projects
-              </h2>
-              <p className="text-gray-600 text-lg w-150 mx-auto text-center mb-14">
-                A selection of projects that highlight my skills in full-stack
-                development, user-focused design, and modern web technologies.
-              </p>
+            {/* Heading */}
+            <h2 className="text-4xl font-extrabold text-gray-800 mb-4 text-center">
+              Featured Projects
+            </h2>
+            <p className="text-gray-600 text-lg max-w-xl mx-auto text-center mb-14">
+              A selection of projects that highlight my skills in full-stack
+              development, user-focused design, and modern web technologies.
+            </p>
 
-              {/* Projects Grid */}
-              <div className="grid gap-10 md:grid-cols-2">
-                {/* Project Card */}
-                <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white flex flex-col">
-                  {/* Image */}
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={MyPhoto}
-                      alt="moneyBook"
-                      className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-300"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h4 className="text-2xl font-semibold text-gray-800 mb-2">
-                      moneyBook
-                    </h4>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      moneyBook helps you take control of your finances by
-                      tracking your income and expenses all in one place.
-                    </p>
-                    <h5 className="font-semibold text-gray-800 mb-2">
-                      Key Features:
-                    </h5>
-                    <ul className="list-disc list-inside space-y-1 text-gray-700 mb-4">
-                      <li>Track all daily income and expenses in one place.</li>
-                      <li>Category-wise income and expense management.</li>
-                      <li>Monthly expense limit with overspending alerts.</li>
-                    </ul>
-
-                    {/* Tags */}
-                    <h5 className="font-semibold text-gray-800 mb-2">
-                      Technologies:
-                    </h5>
-                    <ul className="flex flex-wrap gap-2 mb-6">
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        React
-                      </li>
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        Node.js
-                      </li>
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        Express.js
-                      </li>
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        MongoDB
-                      </li>
-                    </ul>
-
-                    {/* Buttons */}
-                    <div className="flex justify-between gap-3 mt-auto">
-                      <Button
-                        btnTitle={
-                          <div className="flex items-center gap-2">
-                            <Github className="w-5 h-5" />
-                            Code
-                          </div>
-                        }
-                        btnVariant="secondary"
-                        customStyle="w-full"
-                      />
-                      <Button
-                        btnTitle={
-                          <>
-                            <ExternalLink className="w-5 h-5" />
-                            Live Demo
-                          </>
-                        }
-                        btnVariant="primary"
-                        customStyle="w-full"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Duplicate and replace content for other projects */}
-                <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 bg-white flex flex-col">
-                  <div className="relative">
-                    <img
-                      src={MyPhoto}
-                      alt="EduConnect"
-                      className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-300"
-                    />
-                    <div className="absolute inset-0 bg-cyan-700 opacity-0 group-hover:opacity-20 transition duration-300"></div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <h4 className="text-2xl font-semibold text-gray-800 mb-2">
-                      EduConnect
-                    </h4>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      EduConnect is an online learning platform designed to
-                      connect students with curated courses and interactive
-                      study tools.
-                    </p>
-
-                    <h5 className="font-semibold text-gray-800 mb-2">
-                      Technologies:
-                    </h5>
-                    <ul className="flex flex-wrap gap-2 mb-6">
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        React
-                      </li>
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        Tailwind CSS
-                      </li>
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        Node.js
-                      </li>
-                      <li className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm">
-                        MongoDB
-                      </li>
-                    </ul>
-
-                    <div className="flex gap-3 mt-auto">
-                      <Button
-                        btnTitle={
-                          <div className="flex items-center gap-2">
-                            <Github className="w-5 h-5" />
-                            Code
-                          </div>
-                        }
-                        btnVariant="secondary"
-                      />
-                      <Button
-                        btnTitle={
-                          <div className="flex items-center gap-2">
-                            <ExternalLink className="w-5 h-5" />
-                            Live Demo
-                          </div>
-                        }
-                        btnVariant="primary"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Projects Grid */}
+            <div className="grid w-full gap-10 lg:grid-cols-2">
+              {PROJECTS_INFO.map((projectObj) => {
+                const {
+                  id,
+                  projectPhoto,
+                  projectTitle,
+                  projectDesc,
+                  features,
+                  technologies,
+                  gitHubLink,
+                  liveLink,
+                } = projectObj;
+                return (
+                  <ProjectCard
+                    projectPhoto={projectPhoto}
+                    projectTitle={projectTitle}
+                    projectDesc={projectDesc}
+                    features={features}
+                    technologies={technologies}
+                    gitHubLink={gitHubLink}
+                    liveLink={liveLink}
+                    key={id}
+                  />
+                );
+              })}
             </div>
           </section>
         </div>
