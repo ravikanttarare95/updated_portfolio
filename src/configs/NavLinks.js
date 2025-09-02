@@ -13,10 +13,10 @@ const NAV_LINKS = [
     linkTitle: "About",
     icon: User,
   },
-  {
-    linkTitle: "Experience",
-    icon: Briefcase,
-  },
+  // {
+  //   linkTitle: "Experience",
+  //   icon: Briefcase,
+  // },
   {
     linkTitle: "Projects",
     icon: FolderKanban,
