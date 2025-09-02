@@ -1,5 +1,6 @@
 import React from "react";
-import MyPhoto from "./../public/my-photo.png";
+import { Link, Element } from "react-scroll";
+import MyPhoto from "./assets/my-photo.png";
 import { MapPin, Download, Linkedin, Code, PenTool, Users } from "lucide-react";
 
 import Button from "./components/Button";
@@ -29,32 +30,40 @@ function App() {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <nav className="bg-white shadow-md hover:shadow-xl ransition duration-300 w-80 p-6 hidden md:flex flex-col items-center h-screen">
+      <nav className="bg-white shadow-md hover:shadow-xl transition duration-300 w-90 pl-1 pt-6 hidden md:flex flex-col items-center h-screen">
         {/* Profile image (visible on md+ screens) */}
         <img
           src={MyPhoto}
           alt="My Photo"
-          className="w-32 h-32 rounded-full border-4 border-cyan-600 mb-6 bg-gradient-to-b from-cyan-100 to-cyan-50"
+          className="w-37 h-37 rounded-full border-4 border-cyan-600 mb-6 bg-gradient-to-b from-cyan-100 to-cyan-50"
         />
 
         {/* Nav links */}
-        <div className="mt-4 w-full space-y-3">
-          {NAV_LINKS.map(({ linkTitle, icon: Icon }) => {
+        <div className="mt-4 w-full space-y-3 border-t border-t-gray-100">
+          {NAV_LINKS.map(({ linkTitle, icon: Icon, to }) => {
             return (
-              <div key={linkTitle}>
-                {" "}
-                <button className="flex items-center gap-4 w-full px-4 py-3 text-gray-600 text-md font-semibold rounded-lg hover:bg-cyan-100 transition">
-                  <Icon className="text-cyan-700" /> {linkTitle}
-                </button>
-              </div>
+              <Link
+                key={linkTitle}
+                smooth={true}
+                to={to}
+                className="flex items-center gap-4 w-full px-6 py-3 text-gray-600 text-md font-semibold hover:bg-cyan-100 transition cursor-pointer border-l-4 border-l-transparent"
+                spy={true}
+                activeClass="text-cyan-700! bg-cyan-50 shadow-sm font-bold border-l-cyan-700!"
+                containerId="scrollableMain"
+              >
+                <Icon className="text-cyan-700" /> {linkTitle}
+              </Link>
             );
           })}
         </div>
       </nav>
 
       {/* Main Content */}
-      <main className="p-6 md:p-12 overflow-y-auto">
-        <div className="bg-gray-50 rounded shadow-md hover:shadow-xl ransition duration-300 p-7 sm:p-10 w-full">
+      <main className="p-6 md:p-12 overflow-y-auto " id="scrollableMain">
+        <Element
+          name="about"
+          className="bg-gray-50 rounded shadow-md hover:shadow-xl transition duration-300 p-7 sm:p-10 w-full"
+        >
           {/* Profile image (visible only on small screens) */}
           <div className="flex justify-center mb-6 md:hidden">
             <img
@@ -141,9 +150,10 @@ function App() {
               }}
             />
           </div>
-        </div>
+        </Element>
         {/*Projects Section */}
-        <div className=" w-full">
+
+        <Element name="projects" className=" w-full">
           <section className="py-16">
             {/* Heading */}
             <H2 headingTitle={"Featured Projects"} />
@@ -181,9 +191,10 @@ function App() {
               })}
             </div>
           </section>
-        </div>
+        </Element>
         {/*Technical Skills Section */}
-        <div>
+
+        <Element name="skills">
           <H2 headingTitle={"Skills & Expertise"} />
           <p className="text-gray-600 text-lg max-w-xl mx-auto text-center mb-14">
             A comprehensive overview of my technical skills, tools, and soft
@@ -191,7 +202,7 @@ function App() {
           </p>
           <div className="flex flex-col lg:flex-row justify-center gap-10">
             {/* Technical Skills */}
-            <div className="flex-1 bg-white rounded shadow-md hover:shadow-xl ransition duration-300 p-6">
+            <div className="flex-1 bg-white rounded shadow-md hover:shadow-xl transition duration-300 p-6">
               <H3
                 headingTitle={
                   <>
@@ -213,7 +224,7 @@ function App() {
             </div>
 
             {/* Tools & Technologies */}
-            <div className="flex-1 bg-white rounded shadow-md hover:shadow-xl ransition duration-300 p-6">
+            <div className="flex-1 bg-white rounded shadow-md hover:shadow-xl transition duration-300 p-6">
               <H3
                 headingTitle={
                   <>
@@ -230,9 +241,9 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </Element>
 
-        <div className="mt-10 bg-white rounded shadow-md hover:shadow-xl ransition duration-300 p-6">
+        <div className="mt-10 bg-white rounded shadow-md hover:shadow-xl transition duration-300 p-6">
           <H3
             headingTitle={
               <>

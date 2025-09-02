@@ -16,32 +16,31 @@ function ProjectCard({
       <div className="relative overflow-hidden">
         <img
           src={projectPhoto}
-          alt="moneyBook"
-          className="w-full h-56 object-cover transform group-hover:scale-105 transition duration-300"
+          alt={projectTitle}
+          className="w-full h-64 md:h-72 object-cover transform group-hover:scale-105 transition duration-300"
         />
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col">
-        <h4 className="text-2xl font-bold text-gray-800 mb-2">
+      <div className="p-8 flex flex-col">
+        <h4 className="text-3xl font-bold text-gray-800 mb-4">
           {projectTitle}
         </h4>
-        <p className="text-gray-600 mb-4 leading-relaxed">{projectDesc}</p>
+        <p className="text-gray-600 mb-6 leading-relaxed">{projectDesc}</p>
 
-        <h5 className="font-semibold text-gray-800 mb-2">Key Features:</h5>
-        <ul className="list-disc list-inside space-y-1 text-gray-700 mb-4">
+        <h5 className="font-semibold text-gray-800 mb-3">Key Features:</h5>
+        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
           <li>Track all daily income and expenses in one place.</li>
           <li>Category-wise income and expense management.</li>
           <li>Monthly expense limit with overspending alerts.</li>
         </ul>
 
         {/* Tags */}
-        <h5 className="font-semibold text-gray-800 mb-2">Technologies:</h5>
-
-        <ul className="flex flex-wrap gap-2 mb-6">
+        <h5 className="font-semibold text-gray-800 mb-3">Technologies:</h5>
+        <ul className="flex flex-wrap gap-3 mb-8">
           {technologies.map((technology, index) => (
             <li
-              className="bg-cyan-50 px-3 py-1 rounded-full text-cyan-700 text-sm font-medium shadow-sm"
+              className="bg-cyan-50 px-4 py-2 rounded-full text-cyan-700 text-sm font-medium shadow-sm"
               key={index}
             >
               {technology}
@@ -50,7 +49,7 @@ function ProjectCard({
         </ul>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-between gap-3 mt-auto ">
+        <div className="flex flex-col sm:flex-row justify-between gap-4 mt-auto">
           <Button
             btnTitle={
               <div className="flex items-center gap-2">
@@ -60,9 +59,7 @@ function ProjectCard({
             }
             btnVariant="secondary"
             customStyle="w-full"
-            onBtnClick={() => {
-              window.open(gitHubLink, "_blank");
-            }}
+            onBtnClick={() => window.open(gitHubLink, "_blank")}
           />
           <Button
             btnTitle={
@@ -73,9 +70,7 @@ function ProjectCard({
             }
             btnVariant="primary"
             customStyle="w-full"
-            onBtnClick={() => {
-              window.open(liveLink, "_blank");
-            }}
+            onBtnClick={() => window.open(liveLink, "_blank")}
           />
         </div>
       </div>
