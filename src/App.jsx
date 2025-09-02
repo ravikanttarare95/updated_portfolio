@@ -1,6 +1,13 @@
 import React from "react";
 import MyPhoto from "./../public/my-photo.png";
-import { MapPin, Download, Linkedin, ExternalLink, Github } from "lucide-react";
+import {
+  MapPin,
+  Download,
+  Linkedin,
+  ExternalLink,
+  Code,
+  Github,
+} from "lucide-react";
 
 import Button from "./components/Button";
 
@@ -9,6 +16,7 @@ import SOCIAL_ICONS from "./configs/SocialIcons.js";
 import ProjectCard from "./components/ProjectCard.jsx";
 import PROJECTS_INFO from "./configs/Projects.js";
 import H2 from "./components/H2.jsx";
+import H3 from "./components/H3.jsx";
 
 function App() {
   return (
@@ -159,6 +167,21 @@ function App() {
         {/*Technical Skills Section */}
         <div>
           <H2 headingTitle={"Skills & Expertise"} />
+          <p className="text-gray-600 text-lg max-w-xl mx-auto text-center mb-14">
+            A comprehensive overview of my technical skills, tools, and soft
+            skills that enable me to deliver high-quality software solutions.
+          </p>
+          <H3
+            headingTitle={
+              <>
+                <Code
+                  className="bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3"
+                  size={45}
+                />
+                Technical Skills
+              </>
+            }
+          />
         </div>
       </main>
     </div>
