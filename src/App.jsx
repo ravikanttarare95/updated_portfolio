@@ -23,6 +23,7 @@ import GitImg from "./assets/icons/git.png";
 import GitHubImg from "./assets/icons/github.png";
 import PostmanImg from "./assets/icons/postman.png";
 import ViteImg from "./assets/icons/vite.png";
+import SOFT_SKILLS from "./configs/SoftSkills.js";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
         <img
           src={MyPhoto}
           alt="My Photo"
-          className="w-32 h-32 rounded-full border-4 border-cyan-600 mb-6"
+          className="w-32 h-32 rounded-full border-4 border-cyan-600 mb-6 bg-gradient-to-b from-cyan-100 to-cyan-50"
         />
 
         {/* Nav links */}
@@ -59,7 +60,7 @@ function App() {
             <img
               src={MyPhoto}
               alt="My Photo"
-              className="w-32 h-32 rounded-full border-4 border-cyan-700"
+              className="w-32 h-32 rounded-full border-4 border-cyan-700 bg-gradient-to-b from-cyan-100 to-cyan-50"
             />
           </div>
 
@@ -80,7 +81,7 @@ function App() {
                 <div key={index}>
                   <Icon
                     size={39}
-                    className="shadow-lg p-2 border-1 border-gray-200 rounded-lg bg-gray-100 text-gray-600 hover:text-cyan-600 hover:bg-cyan-50 hover:border-cyan-600 cursor-pointer"
+                    className="shadow-lg p-2 border-1 border-gray-300 rounded-lg bg-gray-100 text-gray-600 hover:text-cyan-600 hover:bg-cyan-50 hover:border-cyan-600 cursor-pointer"
                   />
                 </div>
               );
@@ -225,7 +226,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div>
+
+        <div className="mt-10 bg-white rounded shadow-md hover:shadow-xl ransition duration-300 p-6">
           <H3
             headingTitle={
               <>
@@ -237,6 +239,17 @@ function App() {
               </>
             }
           />
+
+          <div className="flex justify-center flex-wrap gap-3 mt-6">
+            {SOFT_SKILLS.map((skill, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-cyan-50 text-cyan-800 font-medium rounded-full border border-cyan-200 hover:bg-cyan-100 transition"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
       </main>
     </div>
