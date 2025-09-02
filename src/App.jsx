@@ -8,6 +8,7 @@ import NAV_LINKS from "./configs/NavLinks.js";
 import SOCIAL_ICONS from "./configs/SocialIcons.js";
 import ProjectCard from "./components/ProjectCard.jsx";
 import PROJECTS_INFO from "./configs/Projects.js";
+import H2 from "./components/H2.jsx";
 
 function App() {
   return (
@@ -115,12 +116,12 @@ function App() {
             />
           </div>
         </div>
+        {/*Projects Section */}
         <div className=" w-full">
           <section className="py-16">
             {/* Heading */}
-            <h2 className="text-4xl font-extrabold text-gray-800 mb-4 text-center">
-              Featured Projects
-            </h2>
+            <H2 headingTitle={"Featured Projects"} />
+
             <p className="text-gray-600 text-lg max-w-xl mx-auto text-center mb-14">
               A selection of projects that highlight my skills in full-stack
               development, user-focused design, and modern web technologies.
@@ -154,6 +155,10 @@ function App() {
               })}
             </div>
           </section>
+        </div>
+        {/*Technical Skills Section */}
+        <div>
+          <H2 headingTitle={"Skills & Expertise"} />
         </div>
       </main>
     </div>
