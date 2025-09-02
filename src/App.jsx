@@ -74,7 +74,7 @@ function App() {
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl font-bold text-gray-800 mb-3">
+          <h1 className="text-5xl font-bold text-gray-700 mb-3">
             Ravikant Tarare
           </h1>
 
@@ -257,7 +257,7 @@ function App() {
             {SOFT_SKILLS.map((skill, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-cyan-50 text-cyan-800 font-medium rounded-full border border-cyan-200 hover:bg-cyan-100 transition"
+                className="px-4 py-2 text-gray-600 font-medium rounded-full border border-gray-300 hover:bg-gradient-to-r from-cyan-700 to-cyan-800 duration-300 shadow-lg hover:shadow-none hover:text-white transition"
               >
                 {skill}
               </span>

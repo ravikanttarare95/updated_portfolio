@@ -6,6 +6,7 @@ function ProjectCard({
   projectPhoto,
   projectTitle,
   projectDesc,
+  features,
   technologies,
   gitHubLink,
   liveLink,
@@ -23,24 +24,24 @@ function ProjectCard({
 
       {/* Content */}
       <div className="p-8 flex flex-col">
-        <h4 className="text-3xl font-bold text-gray-800 mb-4">
+        <h4 className="text-3xl font-bold text-gray-700 mb-4">
           {projectTitle}
         </h4>
         <p className="text-gray-600 mb-6 leading-relaxed">{projectDesc}</p>
 
-        <h5 className="font-semibold text-gray-800 mb-3">Key Features:</h5>
-        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-          <li>Track all daily income and expenses in one place.</li>
-          <li>Category-wise income and expense management.</li>
-          <li>Monthly expense limit with overspending alerts.</li>
+        <h5 className="font-semibold text-gray-700 mb-3">Key Features:</h5>
+        <ul className="list-disc list-inside space-y-2 text-gray-700 marker:text-cyan-700 mb-6">
+          {features.map((feature, i) => (
+            <li key={i}>{feature}</li>
+          ))}
         </ul>
 
         {/* Tags */}
-        <h5 className="font-semibold text-gray-800 mb-3">Technologies:</h5>
+        <h5 className="font-semibold text-gray-700 mb-3">Technologies:</h5>
         <ul className="flex flex-wrap gap-3 mb-8">
           {technologies.map((technology, index) => (
             <li
-              className="bg-cyan-50 px-4 py-2 rounded-full text-cyan-700 text-sm font-medium shadow-sm"
+              className="bg-gradient-to-r from-cyan-700 to-cyan-800 px-4 py-2 rounded-full text-white text-sm font-medium shadow-sm"
               key={index}
             >
               {technology}

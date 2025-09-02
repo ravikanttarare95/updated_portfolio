@@ -10,8 +10,9 @@ const PROJECTS_INFO = [
       "moneyBook helps you take control of your finances by tracking your income and expenses all in one place.",
     features: [
       "Track all daily income and expenses in one place.",
-      "Category-wise income and expense management.",
+      "Category-wise income and expense management with pie chart.",
       "Monthly expense limit with overspending alerts.",
+      "View full transaction history.",
     ],
     technologies: ["HTML", "CSS", "JavaScript"],
     gitHubLink: "https://github.com/ravikanttarare95/money-book.git",
@@ -25,9 +26,8 @@ const PROJECTS_INFO = [
     projectDesc:
       "Experience the authentic taste of India with our delicious, home-style meals. Fresh ingredients, traditional recipes, and a warm ambiance await you!",
     features: [
-      "Browse Menu Items.",
-      "Add Menu Items to cart.",
-      "Increase/Decrease quantity.",
+      "Implement Form Validation for Reviews.",
+      "Increase/Decrease item's quantity.",
       "Total price calculation.",
     ],
     technologies: ["React", "Node.js", "Tailwindcss"],
