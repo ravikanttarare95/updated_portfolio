@@ -11,9 +11,9 @@ import PROJECTS_INFO from "./configs/Projects.js";
 
 function App() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex h-screen">
       {/* Sidebar */}
-      <nav className="bg-white shadow-sm w-64 p-6 hidden md:flex flex-col items-center">
+      <nav className="bg-white shadow-sm w-80 p-6 hidden md:flex flex-col items-center h-screen">
         {/* Profile image (visible on md+ screens) */}
         <img
           src={MyPhoto}
@@ -37,7 +37,7 @@ function App() {
       </nav>
 
       {/* Main Content */}
-      <main className="p-6 md:p-12">
+      <main className="p-6 md:p-12 overflow-y-auto">
         <div className="bg-gray-50 rounded shadow p-7 sm:p-10 w-full">
           {/* Profile image (visible only on small screens) */}
           <div className="flex justify-center mb-6 md:hidden">
