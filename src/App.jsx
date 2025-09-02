@@ -1,13 +1,6 @@
 import React from "react";
 import MyPhoto from "./../public/my-photo.png";
-import {
-  MapPin,
-  Download,
-  Linkedin,
-  ExternalLink,
-  Code,
-  Github,
-} from "lucide-react";
+import { MapPin, Download, Linkedin, Code, PenTool, Users } from "lucide-react";
 
 import Button from "./components/Button";
 
@@ -17,12 +10,25 @@ import ProjectCard from "./components/ProjectCard.jsx";
 import PROJECTS_INFO from "./configs/Projects.js";
 import H2 from "./components/H2.jsx";
 import H3 from "./components/H3.jsx";
+import SkillsIcon from "./components/SkillsIcon.jsx";
+import HtmlImg from "./assets/icons/html.png";
+import CssImg from "./assets/icons/css.png";
+import JsImg from "./assets/icons/js.png";
+import ReactImg from "./assets/icons/react.png";
+import TailwindCssImg from "./assets/icons/tailwindcss.png";
+import NodeJsImg from "./assets/icons/node-js.png";
+import ExpressJsImg from "./assets/icons/express-js.png";
+import MongoDBImg from "./assets/icons/mongo-db.png";
+import GitImg from "./assets/icons/git.png";
+import GitHubImg from "./assets/icons/github.png";
+import PostmanImg from "./assets/icons/postman.png";
+import ViteImg from "./assets/icons/vite.png";
 
 function App() {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <nav className="bg-white shadow-sm w-80 p-6 hidden md:flex flex-col items-center h-screen">
+      <nav className="bg-white shadow-md hover:shadow-xl ransition duration-300 w-80 p-6 hidden md:flex flex-col items-center h-screen">
         {/* Profile image (visible on md+ screens) */}
         <img
           src={MyPhoto}
@@ -47,7 +53,7 @@ function App() {
 
       {/* Main Content */}
       <main className="p-6 md:p-12 overflow-y-auto">
-        <div className="bg-gray-50 rounded shadow p-7 sm:p-10 w-full">
+        <div className="bg-gray-50 rounded shadow-md hover:shadow-xl ransition duration-300 p-7 sm:p-10 w-full">
           {/* Profile image (visible only on small screens) */}
           <div className="flex justify-center mb-6 md:hidden">
             <img
@@ -67,7 +73,7 @@ function App() {
             Full-Stack Developer | MERN Stack
           </h2>
 
-          <div className="flex gap-5 mb-10">
+          <div className="flex gap-3 sm:gap-5 mb-10">
             {SOCIAL_ICONS.map((iconObj, index) => {
               const { Icon } = iconObj;
               return (
@@ -171,14 +177,63 @@ function App() {
             A comprehensive overview of my technical skills, tools, and soft
             skills that enable me to deliver high-quality software solutions.
           </p>
+          <div className="flex flex-col lg:flex-row justify-center gap-10">
+            {/* Technical Skills */}
+            <div className="flex-1 bg-white rounded shadow-md hover:shadow-xl ransition duration-300 p-6">
+              <H3
+                headingTitle={
+                  <>
+                    <Code
+                      className="min-w-11 min-h-11 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3"
+                      size={45}
+                    />
+                    Technical Skills
+                  </>
+                }
+              />
+              <div className="flex justify-center items-center flex-wrap gap-4 mt-6">
+                <SkillsIcon icon={HtmlImg} alt="Html Icon" />
+                <SkillsIcon icon={CssImg} alt="Css Icon" />
+                <SkillsIcon icon={JsImg} alt="Js Icon" />
+                <SkillsIcon icon={ReactImg} alt="React Icon" />
+                <SkillsIcon icon={TailwindCssImg} alt="TailwindCss Icon" />
+                <SkillsIcon icon={NodeJsImg} alt="NodeJs Icon" />
+                <SkillsIcon icon={ExpressJsImg} alt="ExpressJs Icon" />
+                <SkillsIcon icon={MongoDBImg} alt="MongoDB Icon" />
+              </div>
+            </div>
+
+            {/* Tools & Technologies */}
+            <div className="flex-1 bg-white rounded shadow-md hover:shadow-xl ransition duration-300 p-6">
+              <H3
+                headingTitle={
+                  <>
+                    <PenTool
+                      className="min-w-11 min-h-11 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3"
+                      size={45}
+                    />
+                    Tools & Technologies
+                  </>
+                }
+              />
+              <div className="flex justify-center items-center flex-wrap gap-4 mt-6">
+                <SkillsIcon icon={GitImg} alt="Git Icon" />
+                <SkillsIcon icon={GitHubImg} alt="GitHub Icon" />
+                <SkillsIcon icon={ViteImg} alt="Vite Icon" />
+                <SkillsIcon icon={PostmanImg} alt="Postman Icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
           <H3
             headingTitle={
               <>
-                <Code
-                  className="bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3"
+                <Users
+                  className="min-w-11 min-h-11 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3"
                   size={45}
                 />
-                Technical Skills
+                Soft Skills
               </>
             }
           />
