@@ -20,7 +20,7 @@ const SOCIAL_ICONS = [
   },
   {
     Icon: Phone,
-    to: "tel:8075957698",
+    to: "tel:8275957698",
   },
 ];
 export default SOCIAL_ICONS;

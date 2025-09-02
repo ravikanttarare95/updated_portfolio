@@ -115,6 +115,14 @@ function App() {
               }
               btnVariant={"primary"}
               btnSize={"lg"}
+              onBtnClick={() => {
+                const link = document.createElement("a");
+                link.href = "/ravikant-resume.pdf";
+                link.download = "ravikant-resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             />
             <Button
               btnTitle={
