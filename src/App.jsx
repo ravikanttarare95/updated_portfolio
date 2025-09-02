@@ -76,12 +76,15 @@ function App() {
 
           <div className="flex gap-3 sm:gap-5 mb-10">
             {SOCIAL_ICONS.map((iconObj, index) => {
-              const { Icon } = iconObj;
+              const { Icon, to } = iconObj;
               return (
                 <div key={index}>
                   <Icon
                     size={39}
-                    className="shadow-lg p-2 border-1 border-gray-300 rounded-lg bg-gray-100 text-gray-600 hover:text-cyan-600 hover:bg-cyan-50 hover:border-cyan-600 cursor-pointer"
+                    className="shadow-lg p-2 border-1 border-gray-400 rounded-lg bg-gray-100 text-gray-600 hover:text-cyan-600 hover:bg-cyan-50 hover:border-cyan-600 duration-300 cursor-pointer"
+                    onClick={() => {
+                      window.open(to, "_blank");
+                    }}
                   />
                 </div>
               );
@@ -184,10 +187,7 @@ function App() {
               <H3
                 headingTitle={
                   <>
-                    <Code
-                      className="min-w-11 min-h-11 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3"
-                      size={45}
-                    />
+                    <Code className="min-w-10 min-h-10 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3" />
                     Technical Skills
                   </>
                 }
@@ -209,10 +209,7 @@ function App() {
               <H3
                 headingTitle={
                   <>
-                    <PenTool
-                      className="min-w-11 min-h-11 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3"
-                      size={45}
-                    />
+                    <PenTool className="min-w-10 min-h-10 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3" />
                     Tools & Technologies
                   </>
                 }
@@ -231,10 +228,7 @@ function App() {
           <H3
             headingTitle={
               <>
-                <Users
-                  className="min-w-11 min-h-11 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3"
-                  size={45}
-                />
+                <Users className="min-w-10 min-h-10 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-full text-white p-3 mr-3" />
                 Soft Skills
               </>
             }
