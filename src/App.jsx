@@ -51,7 +51,7 @@ function App() {
       </button>
       {/* Sidebar */}
       <nav
-        className={`bg-white/80 backdrop-blur-sm shadow-md hover:shadow-xl transition duration-300 min-w-50 pl-1 pt-13 md:pt-6 ${
+        className={`bg-white/80 backdrop-blur-sm shadow-md hover:shadow-xl transition duration-300 min-w-50 pl-1 max-md:pr-1 pt-13 md:pt-6 ${
           isNavOpen ? "flex" : "hidden"
         } max-md:fixed z-50 right-0 left-0 md:flex flex-col items-center h-screen`}
       >
