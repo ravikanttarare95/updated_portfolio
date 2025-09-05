@@ -41,7 +41,7 @@ function App() {
     <div className="flex h-screen">
       <button
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className="fixed md:hidden top-7 right-11 z-100 p-1 rounded-md bg-gray-100/60 backdrop-blur-xl"
+        className="fixed md:hidden top-7 right-7 border border-gray-200 z-100 p-1 rounded-md bg-gray-100/60 backdrop-blur-xl"
       >
         {isNavOpen ? (
           <X className="h-8 w-8 text-gray-700" />
