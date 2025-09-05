@@ -51,7 +51,7 @@ function App() {
       </button>
       {/* Sidebar */}
       <nav
-        className={`bg-white/80 backdrop-blur-sm shadow-md hover:shadow-xl transition duration-300 min-w-50 pl-1 pt-11 md:pt-6 ${
+        className={`bg-white/80 backdrop-blur-sm shadow-md hover:shadow-xl transition duration-300 min-w-50 pl-1 pt-13 md:pt-6 ${
           isNavOpen ? "flex" : "hidden"
         } max-md:fixed z-50 right-0 left-0 md:flex flex-col items-center h-screen`}
       >
@@ -59,7 +59,7 @@ function App() {
         <img
           src={MyPhoto}
           alt="My Photo"
-          className="w-37 h-37 rounded-full border-4 border-cyan-600 mb-6 bg-gradient-to-b from-cyan-100 to-cyan-50"
+          className="w-32 h-32 rounded-full border-4 border-cyan-700 mb-6 bg-gradient-to-b from-cyan-100 to-cyan-50"
         />
 
         {/* Nav links */}
