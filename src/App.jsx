@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Element } from "react-scroll";
 import MyPhoto from "./assets/my-photo.png";
-import { MapPin, Download, Linkedin, Code, PenTool, Users } from "lucide-react";
+import {
+  MapPin,
+  Download,
+  Linkedin,
+  Code,
+  PenTool,
+  Users,
+  Menu,
+  X,
+} from "lucide-react";
 
 import Button from "./components/Button";
 
@@ -27,10 +36,25 @@ import ViteImg from "./assets/icons/vite.png";
 import SOFT_SKILLS from "./configs/SoftSkills.js";
 
 function App() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <div className="flex h-screen">
+      <button
+        onClick={() => setIsNavOpen(!isNavOpen)}
+        className="fixed md:hidden top-4 right-4 z-100 p-1 rounded-md bg-gray-100/80"
+      >
+        {isNavOpen ? (
+          <X className="h-8 w-8 text-gray-700" />
+        ) : (
+          <Menu className="h-8 w-8 text-gray-700" />
+        )}
+      </button>
       {/* Sidebar */}
-      <nav className="bg-white shadow-md hover:shadow-xl transition duration-300 w-90 pl-1 pt-6 hidden md:flex flex-col items-center h-screen">
+      <nav
+        className={`bg-white/80 backdrop-blur-sm shadow-md hover:shadow-xl transition duration-300 min-w-50 pl-1 pt-11 md:pt-6 ${
+          isNavOpen ? "flex" : "hidden"
+        } max-md:fixed z-50 right-0 left-0 md:flex flex-col items-center h-screen`}
+      >
         {/* Profile image (visible on md+ screens) */}
         <img
           src={MyPhoto}
@@ -46,10 +70,13 @@ function App() {
                 key={linkTitle}
                 smooth={true}
                 to={to}
-                className="flex items-center gap-4 w-full px-6 py-3 text-gray-600 text-md font-semibold hover:bg-cyan-100 transition cursor-pointer border-l-4 border-l-transparent"
+                className="flex items-center gap-4 w-full px-6 py-3 text-gray-600 text-md font-semibold hover:bg-cyan-100 transition cursor-pointer border-l-4 border-l-transparent max-md:text-lg max-md:text-center"
                 spy={true}
                 activeClass="text-cyan-700! bg-cyan-50 shadow-sm font-bold border-l-cyan-700!"
                 containerId="scrollableMain"
+                onClick={() => {
+                  setIsNavOpen(!isNavOpen);
+                }}
               >
                 <Icon className="text-cyan-700" /> {linkTitle}
               </Link>
