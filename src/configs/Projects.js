@@ -27,10 +27,12 @@ const PROJECTS_INFO = [
     projectDesc:
       "Pocket Pilot is a finance management app where users efficiently track and manage their personal finances, including income, expenses, budgets.",
     features: [
+      "User authentication & login with Google.",
       "Track all daily income and expenses in one place.",
       "Category-wise income and expense management with pie chart.",
       "Monthly expense limit with overspending alerts.",
-      "View full transaction history.",
+      "Track Full Transaction	Details.",
+      "Responsive design for mobile and desktop",
     ],
     technologies: ["React", "Tailwindcss", "Node.js", "Express.js", "MondoDB"],
     gitHubLink: "https://github.com/ravikanttarare95/pocket-pilot.git",
