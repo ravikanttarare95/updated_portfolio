@@ -9,11 +9,12 @@ const PROJECTS_INFO = [
     projectDesc:
       "Pocket Pilot is a finance management app where users efficiently track and manage their personal finances, including income, expenses, budgets.",
     features: [
-      "User authentication & login with Google.",
-      "Track all daily income and expenses in one place.",
+      "User registration	/	login (email/password) and Google	OAuth.",
+      "JWT-based	authentication	for protected routes.",
       "Category-wise income and expense management with pie chart.",
-      "Monthly expense limit with overspending alerts.",
+      "Monthly budget storage and overspend	alerts.",
       "Track Full Transaction	Details.",
+      "Data	encryption	for security.",
       "Responsive design for mobile and desktop",
     ],
     technologies: ["React", "Tailwindcss", "Node.js", "Express.js", "MondoDB"],
@@ -27,7 +28,8 @@ const PROJECTS_INFO = [
     projectDesc:
       "BloGrid is a blogging app to share your stories, ideas, and experiences with the world.",
     features: [
-      "User authentication & login with Google.",
+      "User registration	/	login (email/password) and Google	OAuth.",
+      "JWT-based	authentication	for protected routes.",
       "Create, edit, and post blogs.",
       "Users can comment, like, and mark blogs as favourites.",
       "Image upload with drag & drop using imagekit.io.",
