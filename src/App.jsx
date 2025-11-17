@@ -176,7 +176,7 @@ function App() {
               btnSize={"lg"}
               onBtnClick={() => {
                 window.open(
-                  "https://www.linkedin.com/in/ravikant-tarare-7843b31b0/",
+                  "https://www.linkedin.com/in/ravikanttarare95",
                   "_blank"
                 );
               }}
