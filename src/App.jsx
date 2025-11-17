@@ -152,12 +152,17 @@ function App() {
               btnVariant={"primary"}
               btnSize={"lg"}
               onBtnClick={() => {
-                const link = document.createElement("a");
-                link.href = "/ravikant-resume.pdf";
-                link.download = "ravikant-resume.pdf";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                window.open(
+                  "https://drive.google.com/file/d/1Z9WK0eqWkPXLIC_pExIBQ3AczQWedo1h/view",
+                  "_blank"
+                );
+
+                // const link = document.createElement("a");
+                // link.href = "/resume-ravikant-tarare.pdf";
+                // link.download = "resume-ravikant-tarare.pdf";
+                // document.body.appendChild(link);
+                // link.click();
+                // document.body.removeChild(link);
               }}
             />
             <Button

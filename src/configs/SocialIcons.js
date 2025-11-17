@@ -8,7 +8,7 @@ const SOCIAL_ICONS = [
   },
   {
     Icon: Linkedin,
-    to: "https://www.linkedin.com/in/ravikant-tarare-7843b31b0",
+    to: "https://www.linkedin.com/in/ravikanttarare95",
   },
   {
     Icon: SiPeerlist,
